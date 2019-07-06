@@ -1,18 +1,37 @@
 #container{
     text-align: center;
-    margin: 50px 300px;
-    background-color: #273ee8;
-    height: 300px;
+    background-color: #f5ce42;
+    height: 500px;
+    margin: 50px 400px;
     border-radius: 25px;
     padding: 20px;
+    color: black;
+    width: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+    width: 75px;
+    padding: 5px 0;
+    border-radius: 10px;
 }
 
 #butn{
-    margin: 20px;
+    margin: 15px;
+    padding: 15px;
+    display: block;
+}
+
+button{
+    border-radius: 15px;
+}
+
+}
+
+.result {
     padding: 10px;
 }
 
-#result{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+.faded {
+    opacity: 0.4;
 }
