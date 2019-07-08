@@ -14,7 +14,7 @@ rockButton.addEventListener("click", ()=> playRound("Rock",computerPlay()));
 paperButton.addEventListener("click", ()=> playRound("Paper",computerPlay()));
 scissorsButton.addEventListener("click", ()=> playRound("Scissors",computerPlay()));
 
-//Generate random computer choice.
+//Generate random computer choice. Pick a random number between 1 and 3, switch to case. 
 function computerPlay(){
     let random3 = Math.floor((Math.random() * 3) + 1);
     switch (random3){
