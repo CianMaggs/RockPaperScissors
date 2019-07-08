@@ -1,18 +1,22 @@
 #container{
     text-align: center;
-    background-color: #f5ce42;
-    height: 500px;
+    background-color: #8d8b83;
+    height: 350px;
     margin: 50px 400px;
-    border-radius: 25px;
+    border-radius: 45px;
     padding: 20px;
     color: black;
     width: 400px;
     font-family: Lobster;
 }
 
-body{
-    background-color: black;
-}
+html { 
+    background: url(https://upload.wikimedia.org/wikipedia/commons/2/22/New_York_City_at_night_HDR.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 
 img{
     width: 75px;

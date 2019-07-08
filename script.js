@@ -3,8 +3,12 @@ let computerScore = 0;
 const winningScore = 5;
 
 const resultDisplay = document.querySelector("#result");
-const scoreDisplay = document.querySelector("#score");
+const ScoreDisplay = document.querySelector("#score");
 const finalResultDisplay = document.querySelector("#final-result");
+
+const rockButton = document.querySelector("#rock");
+const paperButton = document.querySelector("#paper");
+const scissorsButton = document.querySelector("#scissors");
 
 rockButton.addEventListener("click", ()=> playRound("Rock",computerPlay()));
 paperButton.addEventListener("click", ()=> playRound("Paper",computerPlay()));
@@ -12,7 +16,7 @@ scissorsButton.addEventListener("click", ()=> playRound("Scissors",computerPlay(
 
 //Generate random computer choice.
 function computerPlay(){
-    let random3 = Math.floor((Math.random() * 3) + 1)
+    let random3 = Math.floor((Math.random() * 3) + 1);
     switch (random3){
         case 1: return "Rock";
         case 2: return "Paper";
@@ -44,7 +48,7 @@ function playRound(playerSelection,computerSelection){
         case "Scissors":
             if (computerSelection == "Paper"){
                 result = "win";
-            } else reult = "lose";
+            } else result = "lose";
             break;
     }
 
@@ -61,13 +65,13 @@ function playRound(playerSelection,computerSelection){
 function printResult(result, playerSelection, computerSelection){
     switch(result){
         case "win":
-            resultDisplay.textContent = "You WIN. ${playerSelection} beats ${computerSelection}.";
+            resultDisplay.textContent = `You WIN. ${playerSelection} beats ${computerSelection}.`;
             break;
         case "lose":
-            resultDisplay.textContent = "You LOST. ${computerSelection} beats ${playerSelection}.";
+            resultDisplay.textContent = `You LOST. ${computerSelection} beats ${playerSelection}.`;
             break;
         case "draw":
-            resultDisplay.textContent = "You draw. You both picked ${playerSelection}.";
+            resultDisplay.textContent = `You draw. You both picked ${playerSelection}.`;
             break;
     }
 }
@@ -77,11 +81,11 @@ function updateScore(result){
         playerScore++;
     } else computerScore++;
 
-    scoreDisplay.textContent = "Scores on the doors! YOU: ${playerScore} -- COMPUTER: ${computerScore}";
+    ScoreDisplay.textContent = `Scores on the doors! YOU: ${playerScore} -- COMPUTER: ${computerScore}`;
 }
 
 function endGame(finalResult){
-    if finalResult === "player wins"{
+    if (finalResult === "player wins"){
         finalResultDisplay.textContent = "You won the game!";
     } else finalResultDisplay.textContent = "You lost the game!";
 
@@ -98,7 +102,7 @@ function resetGame(){
     playerScore = 0;
     computerScore = 0;
     resultDisplay.textContent = "Pick your weapon. First to 5 wins!";
-    scoreDisplay.textContent = "Score\'s are! You: 0   Computer: 0";
+    ScoreDisplay.textContent = "Score\'s are! You: 0   Computer: 0";
     finalResultDisplay.textContent = "";
     setWeaponButtonsTo("enabled");
 }
